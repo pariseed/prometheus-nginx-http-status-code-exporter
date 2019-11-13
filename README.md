@@ -5,4 +5,8 @@ This exporter get nginx access log and then after parse from it the returned sta
 
 This project is just born and this code is partial and under testing, so pay attenction if you want to use it
 
-#INSTALL
+# INSTALLATION
+go build nginx-httpcode-exporter.go
+
+# TODO
+create a systemd service
