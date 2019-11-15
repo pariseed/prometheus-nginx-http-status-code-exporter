@@ -1,6 +1,7 @@
 package main
 
 import (
+	"os"
 	"log"
 	"net/http"
 	"strings"
@@ -151,12 +152,20 @@ var code700 = []int{}
 var code700count = 0
 
 
-
+var start = 0
 
 
 func getlog() {
 
-	t, _ := tail.TailFile("/var/log/nginx/nginx-access.log", tail.Config{Follow: true})
+	start = 1
+//	t, _ := tail.TailFile("/var/log/nginx/nginx-access.log", tail.Config{Follow: true})
+	t, err := tail.TailFile("/var/log/nginx/nginx-access.log", tail.Config{Follow: true})
+
+	if err != nil {
+	  // handle error
+		os.Exit(1)
+	} 
+
 
 	for line := range t.Lines {
 
@@ -716,7 +725,7 @@ func commit100() {
 
 	code100 = code100[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -733,7 +742,7 @@ func commit101() {
 
 	code101 = code101[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -750,7 +759,7 @@ func commit102() {
 
 	code102 = code102[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -767,7 +776,7 @@ func commit103() {
 
 	code103 = code103[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -784,7 +793,7 @@ func commit200() {
 
 	code200 = code200[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -801,7 +810,7 @@ func commit201() {
 
 	code201 = code201[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -818,7 +827,7 @@ func commit202() {
 
 	code202 = code202[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -835,7 +844,7 @@ func commit203() {
 
 	code203 = code203[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -852,7 +861,7 @@ func commit204() {
 
 	code204 = code204[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -869,7 +878,7 @@ func commit205() {
 
 	code205 = code205[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -886,7 +895,7 @@ func commit206() {
 
 	code206 = code206[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -903,7 +912,7 @@ func commit207() {
 
 	code207 = code207[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -920,7 +929,7 @@ func commit208() {
 
 	code208 = code208[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -937,7 +946,7 @@ func commit226() {
 
 	code226 = code226[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -954,7 +963,7 @@ func commit300() {
 
 	code300 = code300[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -971,7 +980,7 @@ func commit301() {
 
 	code301 = code301[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -988,7 +997,7 @@ func commit302() {
 
 	code302 = code302[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1005,7 +1014,7 @@ func commit303() {
 
 	code303 = code303[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1022,7 +1031,7 @@ func commit304() {
 
 	code304 = code304[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1039,7 +1048,7 @@ func commit305() {
 
 	code305 = code305[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1056,7 +1065,7 @@ func commit306() {
 
 	code306 = code306[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1073,7 +1082,7 @@ func commit307() {
 
 	code307 = code307[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1090,7 +1099,7 @@ func commit308() {
 
 	code308 = code308[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1107,7 +1116,7 @@ func commit400() {
 
 	code400 = code400[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1124,7 +1133,7 @@ func commit401() {
 
 	code401 = code401[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1141,7 +1150,7 @@ func commit402() {
 
 	code402 = code402[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1158,7 +1167,7 @@ func commit403() {
 
 	code403 = code403[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1175,7 +1184,7 @@ func commit404() {
 
 	code404 = code404[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1192,7 +1201,7 @@ func commit405() {
 
 	code405 = code405[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1209,7 +1218,7 @@ func commit406() {
 
 	code406 = code406[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1226,7 +1235,7 @@ func commit407() {
 
 	code407 = code407[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1243,7 +1252,7 @@ func commit408() {
 
 	code408 = code408[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1260,7 +1269,7 @@ func commit409() {
 
 	code409 = code409[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1277,7 +1286,7 @@ func commit410() {
 
 	code410 = code410[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1294,7 +1303,7 @@ func commit411() {
 
 	code411 = code411[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1311,7 +1320,7 @@ func commit412() {
 
 	code412 = code412[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1328,7 +1337,7 @@ func commit413() {
 
 	code413 = code413[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1345,7 +1354,7 @@ func commit414() {
 
 	code414 = code414[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1362,7 +1371,7 @@ func commit415() {
 
 	code415 = code415[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1379,7 +1388,7 @@ func commit416() {
 
 	code416 = code416[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1396,7 +1405,7 @@ func commit417() {
 
 	code417 = code417[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1413,7 +1422,7 @@ func commit418() {
 
 	code418 = code418[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1430,7 +1439,7 @@ func commit421() {
 
 	code421 = code421[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1447,7 +1456,7 @@ func commit422() {
 
 	code422 = code422[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1464,7 +1473,7 @@ func commit423() {
 
 	code423 = code423[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1481,7 +1490,7 @@ func commit424() {
 
 	code424 = code424[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1498,7 +1507,7 @@ func commit425() {
 
 	code425 = code425[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1515,7 +1524,7 @@ func commit426() {
 
 	code426 = code426[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1532,7 +1541,7 @@ func commit427() {
 
 	code427 = code427[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1549,7 +1558,7 @@ func commit428() {
 
 	code428 = code428[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1566,7 +1575,7 @@ func commit429() {
 
 	code429 = code429[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1583,7 +1592,7 @@ func commit431() {
 
 	code431 = code431[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1600,7 +1609,7 @@ func commit451() {
 
 	code451 = code451[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1617,7 +1626,7 @@ func commit500() {
 
 	code500 = code500[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1634,7 +1643,7 @@ func commit501() {
 
 	code501 = code501[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1651,7 +1660,7 @@ func commit502() {
 
 	code502 = code502[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1668,7 +1677,7 @@ func commit503() {
 
 	code503 = code503[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1685,7 +1694,7 @@ func commit504() {
 
 	code504 = code504[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1702,7 +1711,7 @@ func commit505() {
 
 	code505 = code505[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1719,7 +1728,7 @@ func commit506() {
 
 	code506 = code506[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1736,7 +1745,7 @@ func commit507() {
 
 	code507 = code507[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1753,7 +1762,7 @@ func commit508() {
 
 	code508 = code508[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1770,7 +1779,7 @@ func commit510() {
 
 	code510 = code510[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1787,7 +1796,7 @@ func commit511() {
 
 	code511 = code511[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1804,7 +1813,7 @@ func commit700() {
 
 	code700 = code700[:0]
 
-	time.Sleep(1 * time.Second)
+	
 
 }
 
@@ -1814,72 +1823,147 @@ func exec() {
 	go getlog()
 
 	for {
-		go commit100()
-		go commit101()
-		go commit102()
-		go commit103()
-		go commit200()
-		go commit201()
-		go commit202()
-		go commit203()
-		go commit204()
-		go commit205()
-		go commit206()
-		go commit207()
-		go commit208()
-		go commit226()
-		go commit300()
-		go commit301()
-		go commit302()
-		go commit303()
-		go commit304()
-		go commit305()
-		go commit306()
-		go commit307()
-		go commit308()
-		go commit400()
-		go commit401()
-		go commit402()
-		go commit403()
-		go commit404()
-		go commit405()
-		go commit406()
-		go commit407()
-		go commit408()
-		go commit409()
-		go commit410()
-		go commit411()
-		go commit412()
-		go commit413()
-		go commit414()
-		go commit415()
-		go commit416()
-		go commit417()
-		go commit418()
-		go commit421()
-		go commit422()
-		go commit423()
-		go commit424()
-		go commit425()
-		go commit426()
-		go commit427()
-		go commit428()
-		go commit429()
-		go commit431()
-		go commit451()
-		go commit500()
-		go commit501()
-		go commit502()
-		go commit503()
-		go commit504()
-		go commit505()
-		go commit506()
-		go commit507()
-		go commit508()
-		go commit510()
-		go commit511()
-		go commit700()
-		time.Sleep(5 * time.Second)
+		if (start == 1) {
+			time.Sleep(40 * time.Second)
+			code100 = code100[:0]
+			code101 = code101[:0]
+			code102 = code102[:0]
+			code103 = code103[:0]
+			code200 = code200[:0]
+			code201 = code201[:0]
+			code202 = code202[:0]
+			code203 = code203[:0]
+			code204 = code204[:0]
+			code205 = code205[:0]
+			code206 = code206[:0]
+			code207 = code207[:0]
+			code208 = code208[:0]
+			code226 = code226[:0]
+			code300 = code300[:0]
+			code301 = code301[:0]
+			code302 = code302[:0]
+			code303 = code303[:0]
+			code304 = code304[:0]
+			code305 = code305[:0]
+			code306 = code306[:0]
+			code307 = code307[:0]
+			code308 = code308[:0]
+			code400 = code400[:0]
+			code401 = code401[:0]
+			code402 = code402[:0]
+			code403 = code403[:0]
+			code404 = code404[:0]
+			code405 = code405[:0]
+			code406 = code406[:0]
+			code407 = code407[:0]
+			code408 = code408[:0]
+			code409 = code409[:0]
+			code410 = code410[:0]
+			code411 = code411[:0]
+			code412 = code412[:0]
+			code413 = code413[:0]
+			code414 = code414[:0]
+			code415 = code415[:0]
+			code416 = code416[:0]
+			code417 = code417[:0]
+			code418 = code418[:0]
+			code421 = code421[:0]
+			code422 = code422[:0]
+			code423 = code423[:0]
+			code424 = code424[:0]
+			code425 = code425[:0]
+			code426 = code426[:0]
+			code427 = code427[:0]
+			code428 = code428[:0]
+			code429 = code429[:0]
+			code431 = code431[:0]
+			code451 = code451[:0]
+			code500 = code500[:0]
+			code501 = code501[:0]
+			code502 = code502[:0]
+			code503 = code503[:0]
+			code504 = code504[:0]
+			code505 = code505[:0]
+			code506 = code506[:0]
+			code507 = code507[:0]
+			code508 = code508[:0]
+			code510 = code510[:0]
+			code511 = code511[:0]
+			code700 = code700[:0]
+
+			start = 2
+
+		} else { 
+
+			go commit100()
+			go commit101()
+			go commit102()
+			go commit103()
+			go commit200()
+			go commit201()
+			go commit202()
+			go commit203()
+			go commit204()
+			go commit205()
+			go commit206()
+			go commit207()
+			go commit208()
+			go commit226()
+			go commit300()
+			go commit301()
+			go commit302()
+			go commit303()
+			go commit304()
+			go commit305()
+			go commit306()
+			go commit307()
+			go commit308()
+			go commit400()
+			go commit401()
+			go commit402()
+			go commit403()
+			go commit404()
+			go commit405()
+			go commit406()
+			go commit407()
+			go commit408()
+			go commit409()
+			go commit410()
+			go commit411()
+			go commit412()
+			go commit413()
+			go commit414()
+			go commit415()
+			go commit416()
+			go commit417()
+			go commit418()
+			go commit421()
+			go commit422()
+			go commit423()
+			go commit424()
+			go commit425()
+			go commit426()
+			go commit427()
+			go commit428()
+			go commit429()
+			go commit431()
+			go commit451()
+			go commit500()
+			go commit501()
+			go commit502()
+			go commit503()
+			go commit504()
+			go commit505()
+			go commit506()
+			go commit507()
+			go commit508()
+			go commit510()
+			go commit511()
+			go commit700()
+			time.Sleep(5 * time.Second)
+
+		}
+
 	}
 
 }
