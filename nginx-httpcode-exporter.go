@@ -158,7 +158,7 @@ var start = 0
 func getlog() {
 
 	start = 1
-//	t, _ := tail.TailFile("/var/log/nginx/nginx-access.log", tail.Config{Follow: true})
+
 	t, err := tail.TailFile("/var/log/nginx/nginx-access.log", tail.Config{Follow: true})
 
 	if err != nil {
@@ -1892,9 +1892,10 @@ func exec() {
 			code700 = code700[:0]
 
 			start = 2
-
 		} else { 
-
+			if (tail.Stop == 1) {
+				os.Exit(1)
+			}
 			go commit100()
 			go commit101()
 			go commit102()
@@ -1960,6 +1961,7 @@ func exec() {
 			go commit510()
 			go commit511()
 			go commit700()
+
 			time.Sleep(5 * time.Second)
 
 		}
