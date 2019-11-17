@@ -7,6 +7,3 @@ This project is just born and this code is partial and under testing, so pay att
 
 # INSTALLATION
 go build nginx-httpcode-exporter.go
-
-# TODO
-create a systemd service
