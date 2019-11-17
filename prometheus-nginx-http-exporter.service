@@ -1,0 +1,11 @@
+[Unit]
+Description=prometheus nginx http exporter 
+
+
+[Service]
+ExecStart=/path/to/bin
+Restart=on-failure
+
+
+[Install]
+WantedBy=multi-user.target
