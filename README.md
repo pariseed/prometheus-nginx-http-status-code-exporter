@@ -7,3 +7,9 @@ This project is just born and this code is partial and under testing, so pay att
 
 # INSTALLATION
 go build nginx-httpcode-exporter.go
+
+
+
+
+
+![alt text](https://raw.githubusercontent.com/daniele-parise/prometheus-nginx-http-status-code-exporter/master/dashboard.png)
