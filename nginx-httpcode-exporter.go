@@ -1824,7 +1824,8 @@ func exec() {
 
 	for {
 		if (start == 1) {
-			time.Sleep(40 * time.Second)
+//calculated 20 second to start based on 70mb file size to pass at tail lib			
+			time.Sleep(20 * time.Second)
 			code100 = code100[:0]
 			code101 = code101[:0]
 			code102 = code102[:0]
