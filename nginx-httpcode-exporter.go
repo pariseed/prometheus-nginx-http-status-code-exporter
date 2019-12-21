@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"strings"
 	"time"
-	"github.com/hpcloud/tail"
+	"github.com/daniele-parise/tail"
 	"math"
 	"strconv"
 	"github.com/prometheus/client_golang/prometheus"
