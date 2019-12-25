@@ -4,8 +4,7 @@ nginx all status code exporter
 This exporter get nginx access log and then after parse from it the returned status code, put it into prometheus exporter client.
 
 # INSTALLATION
-go build nginx-httpcode-exporter.go
-
+cd prometheus-nginx-http-status-code-exporter/ && make install
 
 
 
