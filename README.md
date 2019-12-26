@@ -1,5 +1,5 @@
 <p align="left">
-  <a href="https://github.com/actions/setup-go"><img alt="GitHub Actions status" src="https://github.com/actions/setup-go/workflows/Main%20workflow/badge.svg"></a>
+  <a href="https://github.com/daniele-parise/prometheus-nginx-http-status-code-exporter"><img alt="GitHub Actions status" src="https://github.com/daniele-parise/prometheus-nginx-http-status-code-exporter/workflows/Main%20workflow/badge.svg"></a>
 </p>
 
 
