@@ -3,7 +3,6 @@
 </p>
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/daniele-parise/prometheus-nginx-http-status-code-exporter)](https://goreportcard.com/report/github.com/daniele-parise/prometheus-nginx-http-status-code-exporter)
-
 # prometheus-nginx-http-status-code-exporter
 nginx all status code exporter
 
