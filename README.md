@@ -1,6 +1,6 @@
-
-![](https://github.com/daniele-parise/prometheus-nginx-http-status-code-exporter/workflows/build-test/badge.svg)
-
+<p align="left">
+  <a href="https://github.com/daniele-parise/prometheus-nginx-http-status-code-exporter"><img alt="GitHub Actions status" src="https://github.com/daniele-parise/prometheus-nginx-http-status-code-exporter/workflows/build-test/badge.svg"></a>
+</p>
 
 
 # prometheus-nginx-http-status-code-exporter
