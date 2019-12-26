@@ -1,5 +1,5 @@
 
-![alt text](https://github.com/daniele-parise/prometheus-nginx-http-status-code-exporter/workflows/Go/badge.svg)
+![](https://github.com/daniele-parise/prometheus-nginx-http-status-code-exporter/workflows/Go/badge.svg)
 
 
 
