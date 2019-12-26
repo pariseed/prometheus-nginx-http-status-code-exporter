@@ -1,5 +1,5 @@
 
-![](https://github.com/daniele-parise/prometheus-nginx-http-status-code-exporter/workflows/.github/workflows/go.yml/badge.svg)
+https://github.com/daniele-parise/prometheus-nginx-http-status-code-exporter/workflows/Go/badge.svg
 
 
 
