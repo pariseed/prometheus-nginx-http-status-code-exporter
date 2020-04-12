@@ -6,9 +6,9 @@ import (
 	"net/http"
 	"strings"
 	"time"
-	"github.com/daniele-parise/tail"
 	"math"
 	"strconv"
+	"github.com/pariseed/tail"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 )
